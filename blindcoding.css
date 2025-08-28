@@ -24,3 +24,72 @@ p{
     min-height:4rem;
 }
 
+/* Register button */
+.register { display: flex; justify-content: center; align-items: center; margin: 10px 0 50px 0; }
+.register-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 1px solid #ff3333;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(180deg, rgba(255,0,0,0.25), rgba(255,0,0,0.12));
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+    box-shadow: 0 8px 24px rgba(255, 0, 0, 0.35), inset 0 0 12px rgba(255,0,0,0.25);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.register-btn:hover { background: linear-gradient(180deg, rgba(255,0,0,0.35), rgba(255,0,0,0.18)); box-shadow: 0 12px 28px rgba(255, 0, 0, 0.45), inset 0 0 16px rgba(255,0,0,0.35); transform: translateY(-2px) scale(1.02); }
+.register-btn:active { transform: translateY(0); box-shadow: 0 6px 18px rgba(255, 0, 0, 0.35), inset 0 0 10px rgba(255,0,0,0.3); }
+
+/* Rules & Regulations section */
+.rules {
+    max-width: 900px;
+    margin: 30px auto 24px auto;
+    padding: 22px 26px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.25), inset 0 0 18px rgba(255, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+/* subtle section separators */
+.section-divider { height: 1px; max-width: 900px; margin: 22px auto; background: linear-gradient(90deg, transparent, rgba(255,0,0,0.35), transparent); }
+
+.rules h3 {
+    margin: 0 0 12px 0;
+    color: #ff3333;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.rules ul {
+    margin: 0;
+    padding-left: 22px;
+    color: #d6ffd6;
+    font-family: 'Courier New', monospace;
+    line-height: 1.5;
+}
+
+.rules li { margin: 8px 0; }
+
+.rules .note { color: #ffd966; margin-top: 12px; }
+
+.rules .download {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.rules .download a {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid #ff3333;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.rules .download a:hover { background: rgba(255, 0, 0, 0.15); }
+

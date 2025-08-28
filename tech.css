@@ -4,6 +4,91 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* Loading Screen Styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#000000, #0f0f0f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loading-content {
+    text-align: center;
+    color: white;
+}
+
+.loading-logo {
+    font-family: 'SD Dystopian', sans-serif;
+    font-size: 4rem;
+    color: #ff3333;
+    text-shadow:
+        0 0 10px #ff0000,
+        0 0 20px #ff0000,
+        0 0 30px #ff0000;
+    margin-bottom: 30px;
+    animation: glowSteganos 2s ease-in-out infinite;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 51, 51, 0.3);
+    border-top: 4px solid #ff3333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.loading-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 2px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Navigation Styles */
+.nav-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgba(255, 51, 51, 0.1);
+    color: #ff3333;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid #ff3333;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(255, 51, 51, 0.2);
+}
+
+.back-btn:hover {
+    background: rgba(255, 51, 51, 0.8);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 51, 51, 0.4);
+}
+
 body {
     color: white;
     font-family: 'Rajdhani', sans-serif;
@@ -12,11 +97,15 @@ body {
 header{
     color:red;
     text-align: center;
+    position: relative;
+    padding: 60px 20px 20px;
 }
+
 h1, h2 {
     font-family: 'Orbitron', sans-serif;
     animation: pulseGlow 2s infinite;
 }
+
 @keyframes pulseGlow {
   0% { text-shadow: 0 0 5px red; }
   50% { text-shadow: 0 0 20px red; }
@@ -29,9 +118,11 @@ h1, h2 {
     scroll-behavior: smooth;
     padding: 30px 0;
 }
+
 .container::-webkit-scrollbar {
     display: none;
 }
+
 .card {
     height: fit-content;
     margin: 20px auto;
@@ -47,6 +138,7 @@ h1, h2 {
     flex-direction: column;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
 }
+
 .card:first-child {
   margin-top: 0px;
 }
@@ -80,11 +172,13 @@ h1, h2 {
     background-color: #cc0000;
     transform: scale(1.05);
 }
+
 .card p {
     font-family: 'Rajdhani', sans-serif;
     font-size: 1.05rem;
     line-height: 1.6;
 }
+
 header h1 {
     font-size: 5.2rem;
     color: #ff3333;
@@ -107,6 +201,57 @@ html{
     background-size:cover;
     z-index: -1;
     opacity:1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-back {
+        position: relative;
+        top: auto;
+        left: auto;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    header {
+        padding: 40px 15px 15px;
+    }
+    
+    header h1 {
+        font-size: 3.5rem;
+    }
+    
+    .loading-logo {
+        font-size: 3rem;
+    }
+    
+    .loading-spinner {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .loading-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .loading-logo {
+        font-size: 2.5rem;
+    }
+    
+    .loading-spinner {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .loading-text {
+        font-size: 0.9rem;
+    }
 }
 
 

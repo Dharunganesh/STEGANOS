@@ -258,8 +258,8 @@ a {
   }
   
   header h1 {
-    font-size: 10rem;
-    margin-bottom: 30px;
+    font-size: 7rem;
+    margin-bottom: 15px;
   }
   
   .title {
@@ -321,14 +321,11 @@ a {
   }
   
   header h1 {
-    font-size: 7.5rem;
+    font-size: 5rem;
   }
   
   .title {
     font-size: 1.3rem;
-  }
-  .typewriter{
-    font-size:2.3rem;
   }
   .card {
     width: 90vw;
@@ -340,6 +337,7 @@ a {
     font-size: 0.75rem;
   }
 }
+
 
 
 

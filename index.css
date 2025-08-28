@@ -276,6 +276,7 @@ a {
     min-height: 50vh;
     gap: 30px;
     margin: 30px auto;
+    margin-top:-15px;
     padding: 0 15px;
   }
 
@@ -339,6 +340,7 @@ a {
     font-size: 0.75rem;
   }
 }
+
 
 
 

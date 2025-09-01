@@ -68,7 +68,7 @@
 }
 
 .logo-img {
-    max-width: 500px;
+    max-width: 400px;
     height: auto;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
     transition: all 0.3s ease;
@@ -254,7 +254,7 @@ a {
   }
   
   .loading-logo {
-    font-size: 3rem;
+    font-size: 6rem;
   }
   
   header h1 {
@@ -337,6 +337,7 @@ a {
     font-size: 0.75rem;
   }
 }
+
 
 
 

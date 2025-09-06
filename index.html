@@ -44,6 +44,28 @@
         </a>
     </main>
 
+    <section id="countdown-section" class="countdown-section">
+        <h2 class="countdown-title">Event Starts In</h2>
+        <div id="countdown" class="countdown">
+            <div class="countdown-item">
+                <span id="days" class="countdown-value"></span>
+                <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+                <span id="hours" class="countdown-value"></span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes" class="countdown-value"></span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds" class="countdown-value"></span>
+                <span class="countdown-label">Seconds</span>
+            </div>
+        </div>
+    </section>
+
     <footer class="para">
         <p style="color: white; font-size: 18px;">Contact us on:</p>
         <p style="color: white; font-size: 16px;">
@@ -82,6 +104,32 @@
 
         // Start typewriter after loading screen
         setTimeout(typeWriter, 1200);
+    </script>
+
+    <script>
+        // Countdown functionality
+        const countdownDate = new Date(2025, 10, 8, 10, 0, 0).getTime();
+
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<div class='countdown-item'><span class='countdown-value'>Event Started!</span></div>";
+            }
+        }, 1000);
     </script>
 </body>
 </html>

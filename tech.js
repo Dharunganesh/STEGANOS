@@ -83,13 +83,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add scroll event listener with throttling for better performance
     let scrollTimeout;
-    document.querySelector('.container').addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {
       if (scrollTimeout) return;
       scrollTimeout = setTimeout(() => {
         highlightVisibleCard();
         scrollTimeout = null;
       }, 16); // ~60fps throttling
-    });
+    }, { passive: true });
 
     // 🔹 Simple entrance animation (less lag)
     window.addEventListener('load', () => {
@@ -145,35 +145,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Mobile performance optimizations
-    if (window.matchMedia('(max-width: 768px)').matches) { // Assuming a breakpoint for mobile
-        // Reduce scroll performance impact
-        let scrollTimeout;
-        const container = document.querySelector('.container');
-        
-        if (container) {
-            container.addEventListener('scroll', function() {
-                // Throttle scroll events on mobile
-                if (scrollTimeout) return;
-                
-                scrollTimeout = setTimeout(() => {
-                    // Simple scroll handling for mobile
-                    scrollTimeout = null;
-                }, 16); // ~60fps
-            }, { passive: true });
-        }
-        
-        // Disable complex effects on mobile
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        // Enable smooth touch scrolling
         document.body.style.webkitOverflowScrolling = 'touch';
         
         // Optimize for mobile battery life
         if ('requestIdleCallback' in window) {
             requestIdleCallback(() => {
-                // Defer non-critical operations
                 console.log('Mobile optimizations applied');
             });
         }
     }
 
     console.log('STEGANOS tech.js loaded successfully!');
-    console.log('Mobile optimizations:', window.matchMedia('(max-width: 768px)').matches ? 'Enabled' : 'Disabled');
 });

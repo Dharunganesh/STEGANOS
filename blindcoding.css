@@ -47,7 +47,7 @@ p{
 .rules {
     max-width: 900px;
     margin: 30px auto 24px auto;
-    padding: 22px 26px;
+    padding: 22px 22px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 0, 0, 0.4);
     border-radius: 14px;
@@ -76,6 +76,7 @@ p{
 .rules li { margin: 8px 0; }
 
 .rules .note { color: #ffd966; margin-top: 12px; }
+
 
 
 

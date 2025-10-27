@@ -75,7 +75,8 @@ p{
 
 .rules li { margin: 8px 0; }
 
-.rules .note { color: #ffd966; margin-top: 12px; height:32px;}
+.rules .note { color: #ffd966; margin-top: 12px; min-height:0;}
+
 
 
 

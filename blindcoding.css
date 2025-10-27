@@ -77,19 +77,5 @@ p{
 
 .rules .note { color: #ffd966; margin-top: 12px; }
 
-.rules .download {
-    margin-top: 16px;
-    text-align: center;
-}
 
-.rules .download a {
-    display: inline-block;
-    padding: 8px 14px;
-    border: 1px solid #ff3333;
-    border-radius: 8px;
-    color: #fff;
-    text-decoration: none;
-}
-
-.rules .download a:hover { background: rgba(255, 0, 0, 0.15); }
 

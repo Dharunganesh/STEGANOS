@@ -76,7 +76,8 @@ p{
 .rules li { margin: 8px 0; }
 
 .rules .note { color: #ffd966; margin-top: 12px; }
-.rules .note{margin-bottom: 0px;}
+.rule .note p{padding:0px;}
+
 
 
 
